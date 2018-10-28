@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>foodlo.com</title>
+	<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: orange;
+}
+
+</style>
+</head>
+<body>
+	<div id="1">
+			<table>
+			<tr>
+			<td><a href="homepage.html"><img src="edit710a26d2c8b24b71f99d4714bce66225.png" height="50px" width="80px"></a></td>
+				<td style="font-family: timesnewroman;font-size: 50px;"><a href="homepage.html" style="color:orange;">Foodlo</a></td>
+			<td style="padding-left: 950px;"></td>
+
+
+<td><ul>
+  <li><a href="sign up.html">Sign Up</a></li>
+  <li><a href="login.html">Login</a></li>
+</ul></td>
+			</tr>
+		</tr>
+	</table>
+	</td>
+
+<center>
+<div style="border:1px solid black;width: 600px;height: 80px;">
+	<form>
+			<center>
+				<table>
+					<tr>
+			<td><ul>
+				<li><select style="font-size: 25px;height: 30px;margin-top: 25px;" id="time">
+						<option>10:15 am</option>
+						<option>11:15 am</option>
+						<option>12:15 pm</option>
+						<option>1:15 pm</option>
+						<option>2:15 pm</option>
+						<option>3:15 pm</option>
+						<option>4:15 pm</option>
+						<option>5:15 pm</option>
+						<option>6:15 pm</option>
+						<option>7:15 pm</option>
+						<option>8:15 pm</option>
+						<option>9:15 pm</option>
+						<option>10:15 pm</option>
+						<option>11:15 pm</option>
+					</select>
+				</li>
+
+				<li>
+					<input type="date" style="font-size: 17px;height: 30px;margin-top: 25px;" id="date">
+				</li>
+				<li><select style="font-size: 25px;margin-top: 25px;" id="people">
+						<option>1 person</option>
+						<option>2 people</option>
+						<option>3 people</option>
+						<option>4 people</option>
+						<option>5 people</option>
+						<option>6 people</option>
+						<option>7 people</option>
+						<option>8 people</option>
+					</select>
+				</li>
+			</ul>
+		</td>
+		<td><input type="button" value="Check" style="font-family: sans-serif;color: white;height:31px;float: left;font-size: 17px;background-color: rgb(17, 160, 220);margin-top: 25px;" onclick="check()"></td>
+	</tr>
+</table></center>
+		</form>
+</div></center>
+
+
+<center><div style="background-image: url(breakfast.jpg);background-size: cover;">
+	
+	<h3><p>YOU ARE ABOUT TO BOOK A TABLE AT</p>
+		<p style="color:blue;">Barbeque Nation</p></h3>
+		<p id="demo"></p>
+
+
+
+<div>
+		<form align="left" style="width:300px;color: black;">
+			
+			Title<br>
+			<input type="text" size="20" id="title" style="color: "><span id="titles" style="color:red;">*</span><br><br>
+			First Name<br>
+			<input type="text" size="40" id="firstname"><span id="firstnames" style="color:red;">*</span><br><br>
+			Surname<br>
+			<input type="text" size="40" id="surname"><span id="surnames" style="color:red;">*</span><br><br>
+			Mobile<br>
+			<input type="number" size="20" maxlength="10" id="mobileno"><span id="mobilenos" style="color:red;">*</span><br><br>
+			Email<br>
+			<input type="email" size="20" id="email"><span id="emails" style="color:red;">*</span><br><br>
+			
+		</form>
+	</div>
+	<p> I would like to receive news,offers from<br>
+		<span style="color: blue;">Barbeque Nation</span> by</p>
+		<p><input type="checkbox">Email   <input type="checkbox">SMS</p>
+
+		<p><input type="checkbox">Remember my details.</p>
+		<p><input type="checkbox" required>I have read and accepted the terms and conditions.</p>
+		<br>
+		<br>
+		<a href="confirmation page.html"><input type="submit" value="COMPLETE RESERVATION>>" onclick="return validation()" style="padding: 5px;background-color:  rgb(17, 160, 220);color: white;"></a><br><br>
+		
+</div></center>
+
+
+	<div style="background-color:#4c4c4c; color: white;height: 50px;">
+		<center>
+		<table>
+			<tr>
+				<td style="padding-left: 50px;padding-top: 10px;" >880,000 diners' reviews</td>
+				<td style="padding-left: 50px;padding-top: 10px;" > Over 8,900 restaurants</td>
+				<td style="padding-left: 50px;padding-top: 10px;" > In 62 countries</td>
+				<td style="padding-left: 50px;padding-top: 10px;" > 16.3m diners per month</td>
+			</tr>
+		</table>
+		</center>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	function check(){
+		var x=document.getElementById('people').value;
+		var y=document.getElementById('date').value;
+		var z=document.getElementById('time').value;
+		document.getElementById('demo').innerHTML=x+"   "+y+" 	"+z;
+	}
+
+
+
+    function validation(){
+      var title=document.getElementById("title").value;
+      var firstname=document.getElementById("firstname").value;
+      var surname=document.getElementById("surname").value;
+      var mobileno=document.getElementById("mobileno").value;
+      var email=document.getElementById("email").value;
+
+      if(title==""){
+        document.getElementById('titles').innerHTML="*please fill title";
+        return false;
+      }
+      if((title.length<=2) || (title.length>10)){
+        document.getElementById('titles').innerHTML="*title length should be between 2 to 10";
+        return false;
+      }
+      if(!isNaN(title)){
+        document.getElementById('titles').innerHTML="*title cannot be number";
+        return false;
+      }
+
+
+      if(firstname==""){
+        document.getElementById('firstnames').innerHTML="*please fill firstname";
+        return false;
+      }
+      if((firstname.length<=2) || (firstname.length>10)){
+        document.getElementById('firstnames').innerHTML="*firstname length should be between 2 to 10";
+        return false;
+      }
+      if(!isNaN(firstname)){
+        document.getElementById('firstnames').innerHTML="*firstname cannot be number";
+        return false;
+      }
+
+
+       if(surname==""){
+        document.getElementById('surnames').innerHTML="*please fill surname";
+        return false;
+      }
+      if((surname.length<=2) || (surname.length>10)){
+        document.getElementById('surnames').innerHTML="*surname length should be between 2 to 10";
+        return false;
+      }
+      if(!isNaN(surname)){
+        document.getElementById('surnames').innerHTML="*surname cannot be number";
+        return false;
+      }
+
+
+      if(mobileno==""){
+        document.getElementById('mobilenos').innerHTML="*enter mobile number";
+        return false;
+      }
+      if(isNaN(mobileno)){
+        document.getElementById('mobilenos').innerHTML="*mobile number only has numbers";
+        return false;
+      }
+      if(mobileno.lenght==10){
+        document.getElementById('mobilenos').innerHTML="*enter 10 digit mobile number";
+        return false;
+      }
+
+
+      if(email==""){
+        document.getElementById('emails').innerHTML="*enter email";
+        return false;
+      }
+     if(email.indexOf('@')==0){
+       document.getElementById('emails').innerHTML="*@ in invalid position";
+       return false;
+     }
+
+
+    }
+    </script>
+
+
+
+
+
+
+
+	
+</body>
+</html>
